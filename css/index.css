@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/* VARIABLES */
+/* VARIABLES */
+/* GLOBALES */
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+/* NORMALIZE */
+*,
+*::after
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* GLOBALS */
+html {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+  color: #1C1E3D; }
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background-color: #ECF2FE;
+  /* fondo a todo el contenido */
+  align-items: center; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #1C1E3D;
+  display: inline-block; }
+
+/* HELPERS CLASES */
+.flex-row {
+  display: flex; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto; }
+
+/* PARTIALS */
+/* HEADER AND NAVBAR */
+header {
+  background-color: #ECF2FE; }
+  header .navbar {
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; }
+  header .logo {
+    flex-basis: 30%; }
+  header .menu {
+    flex-basis: 50%;
+    justify-content: space-between; }
+    header .menu__icono {
+      padding: 1rem; }
+    header .menu__item {
+      position: relative; }
+      header .menu__item .menu__link {
+        font-size: 1.5em;
+        padding: 1rem; }
+        header .menu__item .menu__link:hover {
+          color: #3A5EC1;
+          transition: all .3s ease-in-out; }
+      header .menu__item .sub-menu {
+        display: none;
+        position: absolute; }
+        header .menu__item .sub-menu__link {
+          padding: 1rem;
+          font-size: 1.4em;
+          transition: all .3s ease-in-out;
+          background-color: #ECF2FE; }
+          header .menu__item .sub-menu__link:hover {
+            background-color: #1C1E3D;
+            color: #ECF2FE; }
+
+/*
+.navbar .menu .menu__item:hover .sub-menu {
+    display: block;
+}
+/*
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  header .navbar {
+    flex-wrap: wrap;
+    justify-content: center; } }
+
+/* FOOTER */
+footer {
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C1E3D;
+  color: white; }
+  footer p {
+    text-align: center;
+    font-size: 1.3em; }
+
+/* VIEWS */
+/* INICIO */
+.presentacion {
+  gap: 2rem;
+  align-items: center;
+  padding: 1em 2em; }
+  .presentacion__picture {
+    flex-basis: 50%;
+    min-width: 320px; }
+  .presentacion__img {
+    width: 100%; }
+  .presentacion__description {
+    flex-basis: 50%; }
+    .presentacion__description h1 {
+      font-size: 4.8em; }
+    .presentacion__description p {
+      font-size: 1.6em; }
+    .presentacion__description button {
+      color: antiquewhite;
+      background-color: #FFA236;
+      border-radius: 8px;
+      border: none;
+      font-size: 1.5em; }
+      .presentacion__description button :hover {
+        background-color: #ee9733;
+        transition: all .4s ease-in-out; }
+    .presentacion__description a {
+      color: white;
+      padding: 1rem; }
+
+/* Ver si se ve bien
+
+.presentacion__description h1 {
+    font-size: 4.8em;
+}
+
+.presentacion__description p {
+    font-size: 1.6em;
+}
+
+.presentacion__description button {
+    color: antiquewhite;
+    background-color: #FFA236;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.5em;
+}
+
+.presentacion__description a {
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+
+.presentacion__description button:hover {
+    background-color: #ee9733;
+    transition: all .4s ease-in-out;
+} 
+/*
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* Main - Inicio */
+  .presentacion {
+    flex-wrap: wrap;
+    font-size: .9em; }
+    .presentacion__picture {
+      flex-grow: 1;
+      /*
+            margin: 3vh; */ }
+    .presentacion__description {
+      flex-grow: 1;
+      /*
+            order: -1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3vh;*/ } }
+
+/* NOSOTROS */
+.nosotros {
+  gap: 6rem;
+  align-items: center;
+  padding: 1em 2em; }
+  .nosotros__picture {
+    flex-basis: 40%;
+    min-width: 320px; }
+  .nosotros__img {
+    width: 100%; }
+  .nosotros__description {
+    flex-basis: 50%; }
+    .nosotros__description h1 {
+      font-size: 3.3em; }
+    .nosotros__description p {
+      font-size: 1.6em; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* Nosotros */
+  .nosotros {
+    flex-wrap: wrap;
+    font-size: .9em; }
+  .nosotros__picture {
+    flex-grow: 1; }
+  .nosotros__description {
+    flex-grow: 1; } }
+
+/* SERVICIOS */
+.servicios {
+  align-items: center;
+  justify-content: center; }
+  .servicios__description {
+    justify-content: center;
+    padding: 1em 2em;
+    align-items: center;
+    flex-wrap: wrap; }
+    .servicios__description h1 {
+      font-size: 3.3em;
+      text-align: center; }
+    .servicios__description p {
+      font-size: 1.6em;
+      text-align: center; }
+  .servicios__boxes {
+    flex-grow: 2;
+    gap: 3rem;
+    justify-content: center;
+    margin: 30px auto;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    align-items: center; }
+    .servicios__boxes h2 {
+      font-size: 2em;
+      justify-content: center;
+      text-align: center; }
+    .servicios__boxes p {
+      font-size: 4em;
+      justify-content: center;
+      text-align: center; }
+    .servicios__boxes li {
+      font-size: 01.2em;
+      text-align: center;
+      position: relative; }
+    .servicios__boxes ul {
+      justify-content: center;
+      align-items: center;
+      margin-left: -40px; }
+    .servicios__boxes button {
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background-color: #FFA236;
+      border-radius: 4px;
+      border: none;
+      font-size: 1.4em;
+      padding: 0.5rem 4rem; }
+  .servicios__card {
+    background-color: white;
+    padding: 20px 50px;
+    padding-bottom: 50px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    align-items: center; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* Servicios */
+  .servicios {
+    flex-wrap: wrap;
+    font-size: .9em; }
+  .servicios__description {
+    flex-grow: 1; }
+  .servicios__boxes {
+    flex-grow: 1; } }
+
+/* GALERÍA */
+.gallery {
+  align-items: center;
+  justify-content: center; }
+  .gallery__description {
+    text-align: center;
+    font-size: 3.3em;
+    padding-top: 1.5em; }
+  .gallery__item {
+    position: relative; }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px; }
+  .gallery__title {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background: linear-gradient(white, black);
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.4em; }
+
+.gallery-container {
+  display: grid;
+  grid-auto-rows: 150px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  grid-gap: 12px;
+  margin-top: 4em;
+  margin-bottom: 4em; }
+
+.gallery__item:nth-child(4) {
+  grid-column: span 2; }
+
+.gallery__item:nth-child(7) {
+  grid-row: span 2; }
+
+.gallery__item:nth-child(8) {
+  grid-row: span 2; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* Galeria */
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr); }
+  /*
+    .gallery__item:nth-child(3) {
+
+
+    } */ }
+
+/* CONTACTO */
+.contacto {
+  gap: 8rem;
+  align-items: center;
+  padding: 1em 2em; }
+  .contacto__picture {
+    flex-basis: 40%;
+    min-width: 320px; }
+  .contacto__img {
+    width: 100%;
+    border-radius: 8px; }
+  .contacto__description {
+    flex-basis: 40%; }
+    .contacto__description h1 {
+      font-size: 3.3em; }
+    .contacto__description p {
+      font-size: 1.6em; }
+  .contacto__button {
+    padding: 12px 16px;
+    color: white;
+    background-color: #FFA236;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1em; }
+  .contacto__label {
+    color: #1C1E3D;
+    font-size: 1.2em; }
+  .contacto__forms {
+    gap: 2rem;
+    flex-grow: 4; }
+  .contacto__items {
+    position: relative;
+    flex-grow: 4; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* Contacto */
+  .contacto {
+    flex-wrap: wrap; }
+  .contacto__picture {
+    flex-grow: 1; }
+  .contacto__description {
+    flex-grow: 1; } }
